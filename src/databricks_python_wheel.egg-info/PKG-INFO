@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: databricks-python-wheel
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: databricks-cli>=0.18.0
+Requires-Dist: pyspark>=4.0.0
+
+# databricks_python_wheel
+
+## Setup: Configure dev environment
+
+To create venv environment and install necessary dependencies:
+```bash
+make install
+```
+
+# Deploy python wheel
+
+To deploy python wheel:
+```bash
+make databricks_wheel
+```

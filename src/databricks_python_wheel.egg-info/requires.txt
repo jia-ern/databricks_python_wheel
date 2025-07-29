@@ -1,0 +1,2 @@
+databricks-cli>=0.18.0
+pyspark>=4.0.0

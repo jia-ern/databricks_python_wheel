@@ -1,0 +1,24 @@
+[project]
+name = "databricks-python-wheel"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "databricks-cli>=0.18.0",
+    "dotenv>=0.9.9",
+    "pyspark>=4.0.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "src/sf_data"
+]
+
+[project.scripts]
+run_pipeline = "main:main"
+
+[tool.coverage.run]
+source = [
+    "./src",
+]
