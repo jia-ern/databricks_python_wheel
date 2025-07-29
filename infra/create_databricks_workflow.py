@@ -1,10 +1,16 @@
+import os
+from dotenv import load_dotenv
 import json
+
 from databricks_cli.sdk.api_client import ApiClient
 from databricks_cli.jobs.api import JobsApi
 
+load_dotenv(".secrets")
+
+
 # Define Databricks instance URL and authentication token
 instance_id = "https://dbc-f4c3fe4b-1200.cloud.databricks.com/"
-db_token = "dapif29f90474b2c791ca199da6bd5dbced5"
+db_token = os.getenv("DB_TOKEN")
 
 # Initialize API Client and Jobs API
 api_client = ApiClient(host=instance_id, token=db_token)
