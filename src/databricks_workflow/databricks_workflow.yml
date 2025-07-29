@@ -1,0 +1,18 @@
+resources:
+  jobs:
+    wind_turbines:
+      name: migrate_sf_to_databricks
+      trigger:
+        pause_status: PAUSED
+        periodic:
+          interval: 1
+          unit: DAYS
+      tasks:
+        - task_key: Migrate_data
+          python_wheel_task:
+            package_name: databricks_python_wheel
+            entry_point: run_pipeline
+          libraries:
+            - whl: /Workspace/Users/jif170122@gmail.com/dist/databricks_python_wheel-0.1.0-py3-none-any.whl
+      queue:
+        enabled: true

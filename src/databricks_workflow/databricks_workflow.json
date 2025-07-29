@@ -1,0 +1,46 @@
+{
+  "name": "snowflake_migration",
+  "email_notifications": {
+    "no_alert_for_skipped_runs": false
+  },
+  "webhook_notifications": {},
+  "timeout_seconds": 0,
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "migrate_sf_to_databricks",
+      "run_if": "ALL_SUCCESS",
+      "python_wheel_task": {
+        "package_name": "databricks_python_wheel",
+        "entry_point": "run_pipeline"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "environment_key": "Task_environment"
+    }
+  ],
+  "queue": {
+    "enabled": true
+  },
+  "environments": [
+    {
+      "environment_key": "Default",
+      "spec": {
+        "client": "2"
+      }
+    },
+    {
+      "environment_key": "Task_environment",
+      "spec": {
+        "client": "2",
+        "dependencies": [
+          "/Workspace/Users/jif170122@gmail.com/dist/databricks_python_wheel-0.1.0-py3-none-any.whl"
+        ]
+      }
+    }
+  ],
+  "performance_target": "STANDARD",
+  "run_as": {
+    "user_name": "jif170122@gmail.com"
+  }
+}
