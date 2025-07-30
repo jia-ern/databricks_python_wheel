@@ -13,8 +13,8 @@ credentials = {
 }
 
 
-def create_spark_session():
-  return SparkSession.builder.appName("Read Snowflake Table").getOrCreate()
+def create_spark_session(app_name: str):
+  return SparkSession.builder.appName(app_name).getOrCreate()
 
 
 def read_snowflake_table(spark, query: string) -> DataFrame:

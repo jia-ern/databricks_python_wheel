@@ -1,5 +1,5 @@
 [project]
-name = "databricks-python-wheel"
+name = "databricks_python_wheel"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -16,7 +16,7 @@ packages = [
 ]
 
 [project.scripts]
-run_pipeline = "main:main"
+run_pipeline = "sf_data.main:main"
 
 [tool.coverage.run]
 source = [
