@@ -1,2 +1,2 @@
 [console_scripts]
-run_pipeline = main:main
+run_pipeline = sf_data.main:main

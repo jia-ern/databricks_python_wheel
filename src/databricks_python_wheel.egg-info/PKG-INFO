@@ -1,10 +1,11 @@
 Metadata-Version: 2.4
-Name: databricks-python-wheel
+Name: databricks_python_wheel
 Version: 0.1.0
 Summary: Add your description here
 Requires-Python: >=3.9
 Description-Content-Type: text/markdown
 Requires-Dist: databricks-cli>=0.18.0
+Requires-Dist: dotenv>=0.9.9
 Requires-Dist: pyspark>=4.0.0
 
 # databricks_python_wheel
