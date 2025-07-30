@@ -11,7 +11,7 @@
       "task_key": "migrate_sf_to_databricks",
       "run_if": "ALL_SUCCESS",
       "python_wheel_task": {
-        "package_name": "databricks_python_wheel",
+        "package_name": "databricks_python_wheel-0.1.0-py3-none-any",
         "entry_point": "run_pipeline"
       },
       "timeout_seconds": 0,

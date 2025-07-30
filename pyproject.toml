@@ -1,5 +1,5 @@
 [project]
-name = "databricks_python_wheel"
+name = "databricks_python_wheel-0.1.0-py3-none-any"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
